@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -12,7 +13,8 @@ export default function Home() {
           width={180}
           height={38}
           priority
-        />
+        /> 
+        Refer a Stranger
         <ol>
           <li>
             Get started by editing <code>src/app/page.js</code>.
@@ -21,29 +23,23 @@ export default function Home() {
         </ol>
 
         <div className={styles.ctas}>
-          <a
+          <Link
             className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
+            href="/get_link"
+            //target="_blank"
             rel="noopener noreferrer"
           >
-            <Image
-              className={styles.logo}
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
+            Find a link
+          </Link>
+
+          <Link
+            href="/add_link"
+            //target="_blank"
             rel="noopener noreferrer"
             className={styles.secondary}
           >
-            Read our docs
-          </a>
+            Add a link
+          </Link>
         </div>
       </main>
       <footer className={styles.footer}>
