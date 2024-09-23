@@ -1,11 +1,16 @@
 import Image from "next/image";
 import styles from "./ui/page.module.css";
-import Link from 'next/link';
+import Link from "next/link";
+import Navbar from "./components/Navbar"
 
 export default function Home() {
   return (
+    
     <div className={styles.page}>
+      <Navbar />
+      
       <main className={styles.main}>
+
         <Image
           className={styles.logo}
           src="https://nextjs.org/icons/next.svg"
