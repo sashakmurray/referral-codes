@@ -1,15 +1,17 @@
 import "../ui/navbar.css"
+import Link from "next/link";
+
 
 const Navbar = () => {
     return (
         <nav className="navbar">
             <div className="navbar-left ">
-                <a href="..">Home</a>
+                <Link href="..">Home</Link>
             </div>
 
             <div className="navbar-center">
-                <a href="../add_link" className="item">Add Link</a>
-                <a href="../get_link">Get Link</a>
+                <Link href="../add_link" className="item">Add Link</Link>
+                <Link href="../get_link">Get Link</Link>
             </div>
 
             <div className="navbar-right">
