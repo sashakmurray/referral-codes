@@ -3,13 +3,12 @@ import Navbar from "../components/Navbar"
 
 export default function Page() {
     return (
-      <div className={styles.page}>
-        <Navbar />
-        <div className={styles.main}>
-          <p>Get Link Page</p>
+      <div><Navbar />
+        <div className={styles.page}>
+          <div className={styles.main}>
+            <p>Get Link Page</p>
+          </div>
         </div>
-        
       </div>
-      
     );
   }
