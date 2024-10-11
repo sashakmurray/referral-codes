@@ -1,6 +1,7 @@
 import styles from "../ui/page.module.css";
 import Link from 'next/link';
-import Navbar from "../components/Navbar"
+import Navbar from "../components/Navbar";
+import SubmissionForm from "../components/SubmissionForm";
 
 export default function Page() {
   return (
@@ -17,10 +18,8 @@ export default function Page() {
             </select>
 
             <br />
-            <input type="text"/>
 
-            <br />
-            <button type="submit">Submit</button>
+            <SubmissionForm />
           
           </div>
         </main>
