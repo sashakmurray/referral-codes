@@ -1,12 +1,9 @@
 import styles from "../ui/page.module.css";
-import Link from 'next/link';
-import Navbar from "../components/Navbar";
 import SubmissionForm from "../components/SubmissionForm";
 
 export default function Page() {
   return (
     <div>
-      <Navbar />
       <div className={styles.page}>
         <main className={styles.main}>
           Add link

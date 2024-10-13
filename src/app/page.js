@@ -1,12 +1,10 @@
 import Image from "next/image";
 import styles from "./ui/page.module.css";
 import Link from "next/link";
-import Navbar from "./components/Navbar"
 
 export default function Home() {
   return (
     <div>
-      <Navbar />
       <div className={styles.page}>
         
         <main className={styles.main}>
