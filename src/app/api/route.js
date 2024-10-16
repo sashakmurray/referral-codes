@@ -4,7 +4,16 @@ import { sql } from "@vercel/postgres";
 // To handle a GET request to /api
 export async function GET(request) {
   // Do whatever you want
-  return NextResponse.json({ message: "Hello World" }, { status: 200 });
+  // const res = await request.json();
+
+  try {
+    const db = await sql`SELECT * FROM links;`;
+    console.log(db);
+    return NextResponse.json({ database: db }, { status: 200 });
+  } catch (error) {
+    return NextResponse.json({ error }, { status: 500 });
+  }
+  
 }
 
 // To handle a POST request to /api
