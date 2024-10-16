@@ -1,4 +1,4 @@
-import styles from "../ui/page.module.css"
+import styles from "@/ui/page.module.css"
 
 export default function Page() {
     return (

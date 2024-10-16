@@ -1,5 +1,5 @@
-import styles from "../ui/page.module.css";
-import SubmissionForm from "../components/SubmissionForm";
+import styles from "@/ui/page.module.css";
+import SubmissionForm from "@/components/SubmissionForm";
 
 export default function Page() {
   return (

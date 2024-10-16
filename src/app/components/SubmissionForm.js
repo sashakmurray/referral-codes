@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { addLink } from './data.js';
+import { addLink } from '@/components/data.js';
 
 export default class SubmissionForm extends React.Component {
     constructor(props) {
