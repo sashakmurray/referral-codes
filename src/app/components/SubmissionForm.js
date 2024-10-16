@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-import { addLink } from '@/components/data.js';
 
 export default class SubmissionForm extends React.Component {
     constructor(props) {
@@ -18,8 +17,28 @@ export default class SubmissionForm extends React.Component {
     async handleSubmit(event) {
       // alert('A name was submitted: ' + this.state.value);
       event.preventDefault();
-  
-      await addLink(this.state.value);
+
+      const data = {link: this.state.value};
+      console.log(data);
+      
+      fetch(
+        "http://localhost:3000/api", 
+        {method: "POST", body: JSON.stringify(data)}
+      ).then(function (response) {
+        if (response.ok) {
+          // Success
+          return response.json();
+        } else {
+          // Error
+          throw new Error(response.statusText);
+        }
+      })
+      .then(function (data) {
+        console.log(data);
+      })
+      .catch(function (error) {
+        console.error(error);
+      });
     }
   
     render() {
