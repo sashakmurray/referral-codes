@@ -1,15 +1,18 @@
 "use server";
 import { sql } from "@vercel/postgres";
 
-export async function FilteredDB(query) {
+export async function FilteredDB(props) {
 
-    const data = await sql`SELECT * FROM links WHERE name LIKE '%'||${query}||'%'`;
-    // console.log(Object.keys(data.rows));
+    const query = props.query;
+    const data = query ? await sql`SELECT * FROM links WHERE name LIKE '%'||${query}||'%'` : await sql`SELECT * FROM links`;
+
+    // console.log(data);
+    // console.log(query);
 
     const DisplayData=data.rows.map(
         (info)=>{
             return(
-                <tr>
+                <tr key={info.id}>
                     <td>{info.name}</td>
                     <td>{info.link}</td>
                     <td>{info.uploaded.toString()}</td>

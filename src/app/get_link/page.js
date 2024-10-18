@@ -4,7 +4,7 @@ import {FilteredDB} from "@/get_link/server_actions.js";
 
 export default function Page(searchParams) {
 
-  const query = searchParams.query || '';
+  const query = searchParams.query || "";
 
     return (
       <div>
