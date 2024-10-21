@@ -1,7 +1,9 @@
 # PromoPortal
 Welcome to PromoPortal, a website where users can share promo codes, referral links, coupons, etc.
 
-## Getting Started
+This app is hosted on Vercel at https://referral-codes-seven.vercel.app/.
+
+## Running the app locally
 
 First, run the development server:
 
